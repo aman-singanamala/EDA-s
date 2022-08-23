@@ -68,3 +68,46 @@ plt.show()
 <i><u><h2>Insight 2</h2></u></i>
 <li> More people are ordering Online</li> 
 <hr>
+
+<h2> Online Order vs Rate </h2>
+
+```
+plt.figure(figsize=(7,7))
+sns.boxplot(x=df['online_order'], y= df['rate'],data=df)
+plt.show()
+```
+
+![Online vs Rate](PLOTS/online_rate.png)
+
+<hr>
+<i><u><h2>Insight 3</h2></u></i>
+<li>Rating is maximum for online orders.</li> 
+ <li>Midlle line is average rating, which is near between 3.5 and 4.0</li>
+ <li>Maximum rating is different , we can observe that from the boxplot </li>
+
+ <hr>
+
+
+ <h2> Book Table  vs Rate </h2>
+
+ ```
+ plt.figure(figsize=(7,7))
+sns.boxplot(x=df['book_table'],y=df['rate'],data=df)
+plt.show()
+```
+
+![Book table vs rate](PLOTS/booktable_rate.png)
+
+<i><u><h2>Insight 4</h2></u></i>
+
+<li> We can notice the restaurants that having the book table facility were given more rating that the restaurants that are not having booking table facility </li>
+<li>if you open a hotel , keep a book table facility for attracting more customers.</li>
+
+
+<hr>
+
+
+..more continued in jupyter notebook
+
+[Here](https://github.com/aman-singanamala/EDA-s/blob/main/ZOMATO-DATASET/analysis.ipynb)
+
