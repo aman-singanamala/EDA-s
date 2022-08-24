@@ -29,9 +29,13 @@ import matplotlib.image as mpimg
 airbnb.isnull().sum()
 ```
 
-![NUll values](./data_files/data/null_values.png)
+![NUll values](.//data/null_values.png)
     
 
-<li> </li>
+<h3>Look into categorical values </h3>
+<li> neighbourhood_group </li>
+<li> neighbourhood </li>
+<li> room type </li>
+
 
 </ol>
