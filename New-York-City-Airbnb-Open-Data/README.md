@@ -24,6 +24,7 @@ import matplotlib.image as mpimg
 <ol>
     <li>  Read the Data </li>
     <li> Find the Number of Null values present in each column</li>
+</ol>
 
 ```
 airbnb.isnull().sum()
@@ -38,4 +39,29 @@ airbnb.isnull().sum()
 <li> room type </li>
 
 
-</ol>
+<h3>Price vs Room Type </h3>
+
+```
+plt.figure(figsize=(20,15))
+sns.scatterplot(x='room_type',y='price',data=airbnb)
+plt.xlabel("Room Type")
+plt.ylabel("Price")
+plt.title("Room Type vs Price ",weight='bold')
+plt.show()
+```
+
+![Price vs Room Type ]('./../data/price_vs_room_type.png)
+
+
+<h3> Insight </h3>
+* From the graph we can notice that the price in Private and Entire romm havethe highest prices
+* The shared room price is always lower than $200
+
+![Same]('./../data/price_vs_room_type_NEIGHBOUR.png)
+
+<h3> Insight </h3>
+<li> The highest price of Private Room and Entire Home/Apt is in the same area which is Manhattan. </li>
+<li>And also brooklyn has very-high prices in Private Room and Entire Home/Apt.</li>
+<li> Shared room's Highest price is in the Queens area </li>
+<br>
+<hr>
