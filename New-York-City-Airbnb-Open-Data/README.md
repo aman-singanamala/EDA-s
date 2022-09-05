@@ -33,35 +33,48 @@ airbnb.isnull().sum()
 ![NUll values](.//data/null_values.png)
     
 
-<h3>Look into categorical values </h3>
-<li> neighbourhood_group </li>
-<li> neighbourhood </li>
-<li> room type </li>
+<hr>
+
+<h2>Neighbourhood_group</h2>
 
 
-<h3>Price vs Room Type </h3>
+<ol>
+    <li> Brooklyn </li>
+    <li> Manhattan </li>
+    <li> Queens </li>
+    <li> Staten Island </li>
+    <li> Bronx</li>
+</ol>
 
 ```
-plt.figure(figsize=(20,15))
-sns.scatterplot(x='room_type',y='price',data=airbnb)
-plt.xlabel("Room Type")
-plt.ylabel("Price")
-plt.title("Room Type vs Price ",weight='bold')
+airbnb['neighbourhood_group'].unique()
+sns.countplot(x='neighbourhood_group',data=airbnb)
 plt.show()
 ```
+![graph](.//data/neighbourhood_group.png)
 
-![Price vs Room Type ]('./../data/price_vs_room_type.png)
+<h1> There are more number of Hotels in Manhattan and less in Staten island </h1>
 
 
-<h3> Insight </h3>
-* From the graph we can notice that the price in Private and Entire romm havethe highest prices
-* The shared room price is always lower than $200
+<hr>
 
-![Same]('./../data/price_vs_room_type_NEIGHBOUR.png)
+<h2>Room type</h2>
 
-<h3> Insight </h3>
-<li> The highest price of Private Room and Entire Home/Apt is in the same area which is Manhattan. </li>
-<li>And also brooklyn has very-high prices in Private Room and Entire Home/Apt.</li>
-<li> Shared room's Highest price is in the Queens area </li>
-<br>
+
+<ol>
+    <li> Private room </li>
+    <li> Entire home/apt </li>
+    <li> Shared room</li>
+</ol>
+
+```
+airbnb['room_type'].unique()
+sns.countplot(x='room_type',data=airbnb)
+plt.show()
+```
+![graph](.//data/room_type.png)
+
+<h1> Entire home/apt room types are high and shared room types are ow </h1>
+
+
 <hr>
