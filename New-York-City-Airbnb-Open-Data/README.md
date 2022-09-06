@@ -74,9 +74,54 @@ plt.show()
 ```
 ![graph](.//data/room_type.png)
 
-<h1> Entire home/apt room types are high and shared room types are ow </h1>
+<h1> Entire home/apt room types are high and shared room types are low </h1>
 
 
 <hr>
+
+
+
+<h2>Neighbourhood</h2>
+
+
+
+
+```
+print( f" There are {len(airbnb['neighbourhood'].unique())} unique neighbourhoods ")
+plt.figure(figsize=(45,15))
+sns.countplot(airbnb.neighbourhood, data=airbnb)
+plt.xlabel('Neibgourhood', fontsize=20)
+plt.ylabel("Count")
+plt.xticks(rotation= 90)
+plt.show()
+```
+![graph](.//data/neighbourhood.png)
+
+<h1> There are 221 unique neighbourhoods and  Williamsburg has the highest </h1>
+
+
+<hr>
+
+<h2>Latitude and Longitude</h2>
+
+
+
+
+```
+plt.figure(figsize=(15,10))
+fig=sns.scatterplot(
+    airbnb.longitude,
+    airbnb.latitude,
+    hue='neighbourhood_group',
+    data=airbnb)
+plt.legend(loc=1)
+```
+![graph](.//data/lat-lon.png)
+
+<h1>  </h1>
+
+
+<hr>
+
 
 
