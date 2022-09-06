@@ -123,5 +123,35 @@ plt.legend(loc=1)
 
 <hr>
 
+<h2>Density and distribution of prices for each neighberhood_group</h2>
+
+
+
+
+```
+A1= airbnb.loc[airbnb['neighbourhood_group']=='Brooklyn']
+price_A1= A1[['price']]
+A2= airbnb.loc[airbnb['neighbourhood_group']=='Manhattan']
+price_A2= A2[['price']]
+A3= airbnb.loc[airbnb['neighbourhood_group']=='Queens']
+price_A3=A3[['price']]
+A4= airbnb.loc[airbnb['neighbourhood_group']=='Staten Island']
+price_A1= A4[['price']]
+A5= airbnb.loc[airbnb['neighbourhood_group']=='Bronx']
+price_A5= A5[['price']]
+
+# Put all the prices in one List
+price_list= [A1,A2,A3,A4,A5]
+
+A6= airbnb[airbnb.price<500]
+viz= sns.violinplot(data=A6,x='neighbourhood_group',y='price')
+viz.set_title('Density and distribution of prices for each neighberhood_group')
+plt.show()
+```
+![graph](.//data/density1.png)
+
+<h1> DEnsity and distribution of prices for each neighbourhood </h1>
+
+
 
 
