@@ -8,7 +8,7 @@
 
 <hr>
 <br>
-<h2>Importing Libraries </h2>
+<h2>Importing Libraries .</h2>
 
 ```
 import numpy as np
